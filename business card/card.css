@@ -7,15 +7,31 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 5px 5px 5px #6c3e3ebd;;
+
 }
+/* .centered::before{
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   box-shadow: -5px 0 0 3px black;
+}
+.centered::after{
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   box-shadow: 5px 0 0 3px black;
+} */
 
 body{
  /*  background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/326221/bg.jpg);*/
-   background-color: #935858bd;
+   background-color: #ffffffbd;
    background-attachment: fixed;
    background-size:cover;
    background-repeat:no-repeat;
+   /* background-image: linear-gradient(35deg, rgb(1, 94, 110) , rgb(2, 55, 104) 20%,rgb(4, 161, 127)) ; */
+   background-image: radial-gradient( rgb(1, 94, 110) , rgb(2, 55, 104) 20%,rgb(4, 161, 127)) ;
 }
 
 h3{
@@ -25,24 +41,38 @@ h3{
 
 
 .front{
-    background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/326221/bc-front.jpg);
+    /* background-image:url("https://img.freepik.com/free-vector/tropical-landscape-with-waterfall-jungle_107791-12562.jpg?w=996&t=st=1656520141~exp=1656520741~hmac=e7769c33ee438f28a003b9431f655abe535c29ea16d0de0fea691be207f615b8"); */
+    background-image: linear-gradient(35deg, rgb(0, 6, 85) , rgb(2, 55, 104) 20%,rgb(0, 0, 75) );
+   
    background-size:cover;
+   box-shadow: -10px 10px 6px 0 rgba(0, 0, 0, 0.4);
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
 }
 
-
+.front h1{
+   color: #e3c557;
+   /* text-shadow: 1px 2px 4px white; */
+}
 
 .back{
-   background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/326221/bc-back.jpg);
+   /* background-image:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/326221/bc-back.jpg); */
+   background-color: white;
+   /* background-image: linear-gradient(35deg, rgb(0, 6, 85) , rgb(2, 55, 104) 80%,rgb(0, 0, 75) ); */
+   background-image: linear-gradient(35deg, rgb(6, 98, 134) , rgb(2, 55, 104) 80%,rgb(36, 0, 0) );
    background-size:cover;
+   box-shadow: 10px 10px 6px 0 rgba(0, 0, 0, 0.4);
 }
    
    h1, p, .font-a-icons {
-      color: black;
+      /* color: black; */
+      color: rgb(255, 255, 255);
       font-family: lato;
       margin-left: 30%;
       line-height: 90%;
    }   
-   
+
    h1{
       margin-top: 5%;    
    }
@@ -51,7 +81,8 @@ h3{
       font-size: 16px;
       padding-bottom: 15px;
       width: 35%;
-      border-bottom: 2px solid black;
+      /* color: yellow;
+      border-bottom: 2px solid rgb(255, 174, 0); */
    }
    
    .bold{
@@ -67,7 +98,7 @@ h3{
       }
       
       span, .link, .fa, a{
-         color: black;
+         color: white;
       }  
       
       .fa{
@@ -84,7 +115,7 @@ h3{
       }
       
       a:hover, .website:hover{
-         color: #3f3f3f;
+         color: #7c7878;
       }     
    
    .icon-box{
@@ -97,7 +128,7 @@ h3{
       top: 75px;
       left: 30%;
       display: inline-block;
-      border: 2px solid black;
+      border: 2px solid rgb(253, 252, 252);
       margin: px;
       text-align: center;
       cursor: pointer;
@@ -106,10 +137,13 @@ h3{
 	         transition: all ease 0.5s;
    }
    .icon-box:hover {
-    box-shadow: inset 0 50px 0 0 black;
-    color: white;
+    box-shadow: inset 0 50px 0 0  rgb(2, 101, 126) ;
+    color: black;
+    background-color: white;
    }
-
+   .icon-box:first-child{
+      box-shadow: inset 0 50px 0 0 rgb(1, 34, 94);
+   }
 
 .flip-container {
 	perspective: 1000px;
@@ -125,14 +159,15 @@ h3{
 }
 
 .flipper {
-	transition: 0.5s;
+   transition: 0.5s;
 	transform-style: preserve-3d;
 	position: relative;
 }
 
 .front, .back {
-	backface-visibility: hidden;
+   backface-visibility: hidden;
 	position: absolute;
+ 
 }
 
 .front {
